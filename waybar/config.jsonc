@@ -1,0 +1,70 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "backlight", "network", "power-profiles-daemon", "battery", "clock"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Mute",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": "󰖪 Brak sieci",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\nIP: {ipaddr}",
+        "on-click": "kitty nmtui"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Profil zasilania: {profile}\nSterownik: {driver}",
+        "tooltip": true,
+        "format-icons": {
+          "performance": "",
+          "balanced": "",
+          "power-saver": ""
+        }
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+}
