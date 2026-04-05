@@ -1,12 +1,7 @@
-# Ignore everything
 *
-
-# But not these files...
 !.gitignore
-!nvim/
-!tmux/
-!waybar/
-!hypr/
-
-# ...even if they are in subdirectories
 !*/
+!nvim/**
+!tmux/**
+!waybar/**
+!hypr/**
