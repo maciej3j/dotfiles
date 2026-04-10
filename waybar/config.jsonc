@@ -13,6 +13,7 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
+        "active-only": false,
         "format-icons": {
             "active": "",
             "default": ""
@@ -35,7 +36,7 @@
     },
 
     "network": {
-        "format-wifi": "  {essid}",
+        "format-wifi": " ",
         "format-ethernet": "󰈀 LAN",
         "format-disconnected": "󰖪 Brak sieci",
         "tooltip-format": "{ifname} via {gwaddr}",
